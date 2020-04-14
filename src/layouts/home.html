@@ -1,0 +1,27 @@
+{{!-- This is the base layout for your project, and will be used on every page unless specified. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  {{> head-home}}
+<body>
+    <div id="skiptocontent">
+      <a href="#main_content">Skip navigation to main content</a>
+    </div>
+
+      <div class="header_container">
+        {{> header}}
+      </div>
+
+      <div class="main_wrapper">
+        <div class="main" id="content">
+          {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+          {{> body}}
+
+
+          {{> footer}}
+        </div>
+      </div><!-- end content -->
+
+  <script src="{{root}}assets/js/app.js"></script>
+  {{> scripts}}
+</html>

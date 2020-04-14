@@ -1,0 +1,115 @@
+// accessibility
+.screen_reader_accessible {
+  display: none;
+  width:0;
+  height: 0;
+  color: $black;
+  background: $white;
+}
+
+#skiptocontent a {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  background-color: #B22222;
+  color: $white;
+  z-index: 20;
+  &:focus {
+    position:relative;
+    width:100vw;
+    left:0;
+    height:auto;
+    padding: .5rem 1rem;
+    display: block;
+  }
+  &:hover, &:active {
+    color: #D6D6D6;
+  }
+}
+
+ul.no_dots {
+  list-style-type: none;
+  margin-left: 0;
+  display: inline-block;
+  display: flex;
+}
+
+.header_container {
+  header {grid-area: header;}
+
+  margin: 0 auto;
+  background-color: $dark-black;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: auto 800px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    ". header ."
+  }
+}
+
+.main_wrapper {
+
+  .main {grid-area: main;}
+
+  margin: 0 auto;
+  background-color: $success-color;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns:  auto 800px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    ". main .";
+  }
+}
+
+.main {
+  background-color: $success-color;
+}
+
+// header
+.header_container {
+  background-color: $dark-black;
+}
+// header top - logo
+.header_top__tagline {grid-area: tagline;}
+.header_top__logo {grid-area: logo;}
+
+.header_top__container {
+  background-color: $dark-black;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100% 100%;
+  grid-template-areas:
+  "tagline"
+  "logo";
+}
+.header_top__tagline {
+  width: 100%;
+  @supports (font-variant-caps: petite-caps) {
+    font-variant-caps: petite-caps;
+  }
+}
+
+// navigation
+nav {
+  ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+  }
+  li {
+    text-align: center;
+    border: 1px solid $dark-black;
+    background-color: $secondary-color;
+    flex-grow: 1;
+  }
+}
