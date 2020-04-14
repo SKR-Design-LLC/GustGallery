@@ -55,7 +55,7 @@ ul.no_dots {
 .main_wrapper {
 
   .main {grid-area: main;}
-
+  nav {grid-area:nav;}
   margin: 0 auto;
   background-color: $success-color;
 
@@ -64,9 +64,12 @@ ul.no_dots {
     grid-template-columns:  auto 800px auto;
     grid-template-rows: auto auto;
     grid-template-areas:
+    "nav nav nav"
     ". main .";
   }
 }
+
+
 
 .main {
   background-color: $success-color;
@@ -84,7 +87,6 @@ ul.no_dots {
   background-color: $dark-black;
   text-align: center;
   padding-top: 1rem;
-  padding-bottom: 1rem;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 100% 100%;
@@ -94,22 +96,28 @@ ul.no_dots {
 }
 .header_top__tagline {
   width: 100%;
+  letter-spacing: .2rem;
   @supports (font-variant-caps: petite-caps) {
     font-variant-caps: petite-caps;
   }
 }
 
 // navigation
+
 nav {
   ul {
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: space-between;
+    box-shadow: 1px 4px 4px $black;
   }
   li {
+    font-size: 120%;
     text-align: center;
     border: 1px solid $dark-black;
     background-color: $secondary-color;
     flex-grow: 1;
+    font-weight: 900;
+    text-shadow: 1px 4px 4px $black;
   }
 }

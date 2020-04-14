@@ -13,6 +13,13 @@
       </div>
 
       <div class="main_wrapper">
+
+        <nav aria-label="Main Navigation" role="navigation">
+          <ul class="no_dots">
+            {{> nav}}
+          </ul>
+        </nav>
+        
         <div class="main" id="content">
           {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
           {{> body}}
