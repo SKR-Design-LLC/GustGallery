@@ -15,3 +15,21 @@ require('foundation-sites');
 
 
 $(document).foundation();
+
+let switchNavMenuItem = (menuItems) => {
+
+    var current = location.pathname
+
+    $.each(menuItems, (index, item) => {
+
+        $(item).removeClass('active')
+
+        if ((current.includes($(item).attr('href')) && $(item).attr('href') !== "/") || ($(item).attr('href') === "/" && current === "/")){
+            $(item).addClass('active')
+        }
+    })
+}
+
+$(document).ready(() => {
+    switchNavMenuItem($('.main_nav li a, .main_nav li link'))
+})

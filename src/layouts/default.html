@@ -13,14 +13,20 @@
     </div>
 
     <div class="main_wrapper">
-      <div class="main" id="content">
+
+      <nav aria-label="Main Navigation" role="navigation">
+        <ul class="no_dots">
+          {{> nav}}
+        </ul>
+      </nav>
+
         {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
         {{> body}}
 
 
         {{> footer}}
       </div>
-    </div><!-- end content -->
+    </div><!-- class="main" id="content" found in pages -->
 
   <script src="{{root}}assets/js/app.js"></script>
   {{> scripts}}
