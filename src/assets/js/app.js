@@ -16,20 +16,14 @@ require('foundation-sites');
 
 $(document).foundation();
 
-let switchNavMenuItem = (menuItems) => {
-
-    var current = location.pathname
-
-    $.each(menuItems, (index, item) => {
-
-        $(item).removeClass('active')
-
-        if ((current.includes($(item).attr('href')) && $(item).attr('href') !== "/") || ($(item).attr('href') === "/" && current === "/")){
-            $(item).addClass('active')
+// Adds active class in nav item to represent current page
+$(function(){
+    var current = location.pathname;
+    $('#main_nav li a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active');
         }
-    })
-}
-
-$(document).ready(() => {
-    switchNavMenuItem($('.main_nav li a, .main_nav li link'))
-})
+    });
+});

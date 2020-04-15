@@ -1,0 +1,35 @@
+// navigation
+nav {
+  ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    box-shadow: 1px 5px 6px #111;
+  }
+  li {
+    font-size: 120%;
+    text-align: center;
+    border: 1px solid $dark-black;
+    background-color: $secondary-color;
+    flex-grow: 1;
+    font-weight: 900;
+
+    &.fill {
+      flex-grow:3;
+    }
+
+    a {
+      line-height: 1;
+      display: block;
+      text-decoration: none;
+      //text-shadow: 1px 4px 4px $black;
+      border: 8px solid $secondary-color;
+      &:hover, &:focus, &:active, &.active {
+        background-color: $primary-color;
+        color: $dark-black;
+        text-shadow: none;
+      }
+    }
+
+  }
+}

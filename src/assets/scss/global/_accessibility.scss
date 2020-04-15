@@ -1,0 +1,31 @@
+// accessibility
+.screen_reader_accessible {
+  display: none;
+  width:0;
+  height: 0;
+  color: $black;
+  background: $white;
+}
+
+#skiptocontent a {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  background-color: #B22222;
+  color: $white;
+  z-index: 20;
+  &:focus {
+    position:relative;
+    width:100vw;
+    left:0;
+    height:auto;
+    padding: .5rem 1rem;
+    display: block;
+  }
+  &:hover, &:active {
+    color: #D6D6D6;
+  }
+}

@@ -92,8 +92,8 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
+    'h2': ('font-size': 33),
+    'h3': ('font-size': 30),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
@@ -108,10 +108,10 @@ $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
-$anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
-$hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
+$anchor-text-decoration: underline;
+$anchor-text-decoration-hover: underline;
+$hr-width: 100%;
+$hr-border: 46px solid $secondary-color;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -126,11 +126,11 @@ $blockquote-color: $dark-gray;
 $blockquote-padding: rem-calc(9 20 0 19);
 $blockquote-border: 1px solid $medium-gray;
 $enable-cite-block: true;
-$keystroke-font: $font-family-monospace;
-$keystroke-color: $black;
-$keystroke-background: $light-gray;
-$keystroke-padding: rem-calc(2 4 0);
-$keystroke-radius: $global-radius;
+// $keystroke-font: $font-family-monospace;
+// $keystroke-color: $black;
+// $keystroke-background: $light-gray;
+// $keystroke-padding: rem-calc(2 4 0);
+// $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
 
 // 5. Typography Helpers

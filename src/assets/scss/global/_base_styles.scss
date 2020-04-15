@@ -1,35 +1,3 @@
-// accessibility
-.screen_reader_accessible {
-  display: none;
-  width:0;
-  height: 0;
-  color: $black;
-  background: $white;
-}
-
-#skiptocontent a {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-  background-color: #B22222;
-  color: $white;
-  z-index: 20;
-  &:focus {
-    position:relative;
-    width:100vw;
-    left:0;
-    height:auto;
-    padding: .5rem 1rem;
-    display: block;
-  }
-  &:hover, &:active {
-    color: #D6D6D6;
-  }
-}
-
 // list styles
 ul.no_dots {
   list-style-type: none;
@@ -43,6 +11,26 @@ ul.no_dots_vert {
   margin-left: 0;
 }
 
+hr {
+  box-shadow: 1px 5px 6px #111;
+}
+
+a {
+  font-weight: 900;
+
+  &[href^="tel:"] {
+    text-decoration: none;
+    &:before {
+      content: "\260e";
+      margin-right: 0.5em;
+    }
+  }
+  &[href^="mailto:"]:before {
+    content: "\2709";
+    margin-right: 0.5em;
+    text-decoration: none;
+  }
+}
 
 // header
 .header_container {
@@ -82,7 +70,7 @@ ul.no_dots_vert {
 .header_top__tagline {
   width: 100%;
   letter-spacing: .2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   @supports (font-variant-caps: petite-caps) {
     font-variant-caps: petite-caps;
   }
@@ -109,43 +97,7 @@ ul.no_dots_vert {
   }
 }
 
-// navigation
-nav {
-  ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: space-between;
-    box-shadow: 1px 5px 6px #222;
-  }
-  li {
-    font-size: 120%;
-    text-align: center;
-    border: 1px solid $dark-black;
-    background-color: $secondary-color;
-    flex-grow: 1;
-    font-weight: 900;
-
-    &.fill {
-      flex-grow:3;
-    }
-
-    a {
-      line-height: 1;
-      display: block;
-      text-shadow: 1px 4px 4px $black;
-      border: 8px solid $secondary-color;
-      &:hover, &:focus, &:active, &.active {
-        background-color: $primary-color;
-        color: $dark-black;
-        text-shadow: none;
-      }
-    }
-
-  }
-}
-
 // main section
-
 .main_wrapper {
   nav {
     background-color: $primary-color;
@@ -164,7 +116,7 @@ nav {
 
 
 .main {
-  padding: 2rem 0 0 0 ;
+  padding: 3rem 0 0 0;
   text-align: center;
 
   ul {

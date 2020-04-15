@@ -4,31 +4,31 @@
 <html class="no-js" lang="en">
   {{> head-home}}
 <body>
-    <div id="skiptocontent">
-      <a href="#main_content">Skip navigation to main content</a>
+  <div id="skiptocontent">
+    <a href="#main_content">Skip navigation to main content</a>
+  </div>
+
+  <div class="header_container">
+    {{> header}}
+  </div>
+
+  <div class="main_wrapper" id="home">
+
+    <nav aria-label="Main Navigation" role="navigation">
+      <ul class="no_dots" id="main_nav">
+        {{> nav}}
+      </ul>
+    </nav>
+
+    <div class="main" id="content">
+      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+      {{> body}}
+
     </div>
-
-      <div class="header_container">
-        {{> header}}
-      </div>
-
-      <div class="main_wrapper" id="home">
-
-        <nav aria-label="Main Navigation" role="navigation">
-          <ul class="no_dots" class="main_nav">
-            {{> nav}}
-          </ul>
-        </nav>
-
-        <div class="main" id="content">
-          {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-          {{> body}}
-
-
-          {{> footer}}
-        </div>
-      </div><!-- end content -->
-
+  </div><!-- end content -->
+  <hr>
+  {{> footer}}
+  
   <script src="{{root}}assets/js/app.js"></script>
   {{> scripts}}
 </html>
