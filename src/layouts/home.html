@@ -12,23 +12,25 @@
     {{> header}}
   </div>
 
-  <div class="main_wrapper" id="home">
+  <div class="main_wrapper">
 
     <nav aria-label="Main Navigation" role="navigation">
       <ul class="no_dots" id="main_nav">
         {{> nav}}
       </ul>
     </nav>
-
-    <div class="main" id="content">
-      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-      {{> body}}
-
+    <div class="page_title">
+      <h2>Home</h2>
     </div>
-  </div><!-- end content -->
+  </div> <!-- end main_wrapper -->
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+  </div><!-- end #home found in pages -->
+
   <hr>
   {{> footer}}
-  
+
   <script src="{{root}}assets/js/app.js"></script>
   {{> scripts}}
 </html>

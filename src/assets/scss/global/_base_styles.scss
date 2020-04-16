@@ -11,6 +11,13 @@ ul.no_dots_vert {
   margin-left: 0;
 }
 
+ul.no_dots_vert_center {
+  list-style-type: none;
+  margin-left: 0;
+  text-align: center;
+}
+
+// anchor
 a {
   font-weight: 900;
   text-underline-position: under;
@@ -106,24 +113,8 @@ a {
   padding: 3rem 0 0 0;
   text-align: center;
 
-  ul {
-    text-align: left;
-  }
-
   img {
     padding:1rem 0;
   }
 
-}
-
-// homepage
-.main_wrapper#home {
-
-  nav {
-    background-color: $success-color;
-  }
-
-  .main {
-    padding: 2rem 0 0 0;
-  }
 }
