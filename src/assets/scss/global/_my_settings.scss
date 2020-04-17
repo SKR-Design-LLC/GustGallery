@@ -17,7 +17,7 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $dark-black: #000000;
 $white: #fefefe;
-$body-background: $success-color;
+$body-background: $dark-black;
 $body-font-color: $primary-color;
 $body-font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
 $body-antialiased: true;
@@ -31,12 +31,11 @@ $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
-$global-prototype-breakpoints: false;
+//$global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 $print-hrefs: true;
-
 
 // 2. Breakpoints
 // --------------
@@ -103,7 +102,7 @@ $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
-$paragraph-margin-bottom: 1rem;
+$paragraph-margin-bottom: 2rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
 $anchor-color: $primary-color;

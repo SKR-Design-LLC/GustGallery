@@ -15,7 +15,7 @@
     <div class="main_wrapper">
 
       <nav aria-label="Main Navigation" role="navigation">
-        <ul class="no_dots" id="main_nav">
+        <ul class="no_dots main_nav">
           {{> nav}}
         </ul>
       </nav>
@@ -26,10 +26,10 @@
       </div><!-- end class="main" id="content" found in pages -->
     </div> <!-- end class="main_wrapper" -->
 
-    <hr>
-    {{> footer}}
-
+    <div class="bottom__container">
+      <hr>
+      {{> footer}}
+    </div>
   <script src="{{root}}assets/js/app.js"></script>
-  {{> scripts}}
 </body>
 </html>

@@ -26,12 +26,15 @@ a {
   }
 }
 
+address {
+  font-style: normal;
+}
+
 // header
 .header_container {
   header {grid-area: header;}
-
-  margin: 0 auto;
   background-color: $dark-black;
+  margin: 0 auto;
 
   @supports (display: grid) {
     display: grid;
@@ -55,8 +58,8 @@ a {
   text-align: center;
   padding-top: .5rem;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 100% 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
   grid-template-areas:
   "tagline"
   "logo";
@@ -77,8 +80,9 @@ a {
   .main {grid-area: main; background-color: $success-color;}
   nav {grid-area:nav;}
   .page_title {grid-area: title;}
+
+  
   margin: 0 auto;
-  background-color: $success-color;
 
   @supports (display: grid) {
     display: grid;
@@ -92,20 +96,28 @@ a {
 }
 
 // main section
+
 .main_wrapper {
+  background-color: $success-color;
+  padding: 0;
+
   nav {
     background-color: $primary-color;
   }
-}
 
-.main_wrapper {
-  padding: 0;
+  h2, .h2 {
+    line-height: 1.45;
+    margin-top: -2rem;
+    // text-shadow: 4px 2px 8px #333;
+  }
+
 }
 
 .page_title {
   background-color: $primary-color;
   color: $secondary-color;
   text-align: center;
+  line-height: 1.5;
 }
 
 
@@ -117,4 +129,16 @@ a {
     padding:1rem 0;
   }
 
+}
+
+.bottom__container {
+  background-color: $success-color;
+  margin-top: -.8rem;
+  padding: 2rem 0 1rem 0;
+}
+// Arists page
+.artist_individual {
+  figcaption {
+    font-weight: $global-weight-bold;
+  }
 }

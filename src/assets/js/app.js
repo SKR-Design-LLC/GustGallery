@@ -16,14 +16,15 @@ require('foundation-sites');
 
 $(document).foundation();
 
-// Adds active class in nav item to represent current page
+// Assigns "active" class to navbar item based on current page URL with jQuery
 $(function(){
-    var current = location.pathname;
-    $('#main_nav li a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('active');
-        }
-    });
+  var pathname = window.location.pathname;
+	 $('.main_nav > li > a[href="'+pathname+'"]').addClass('active');
+});
+
+// Adds current year to Copyright text in footer
+$(function(){
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById("year").innerHTML = n;
 });
