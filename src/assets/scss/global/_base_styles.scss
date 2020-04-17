@@ -81,7 +81,7 @@ address {
   nav {grid-area:nav;}
   .page_title {grid-area: title;}
 
-  
+
   margin: 0 auto;
 
   @supports (display: grid) {
@@ -105,11 +105,7 @@ address {
     background-color: $primary-color;
   }
 
-  h2, .h2 {
-    line-height: 1.45;
-    margin-top: -2rem;
-    // text-shadow: 4px 2px 8px #333;
-  }
+
 
 }
 
@@ -118,11 +114,17 @@ address {
   color: $secondary-color;
   text-align: center;
   line-height: 1.5;
+  
+  h2, .h2 {
+    line-height: 1.45;
+    margin-top: -2rem;
+    // text-shadow: 4px 2px 8px #333;
+  }
 }
 
 
 .main {
-  padding: 3rem 0 0 0;
+  padding: 2.5rem 0 0 0;
   text-align: center;
 
   img {
