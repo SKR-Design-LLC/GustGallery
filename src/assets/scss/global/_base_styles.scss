@@ -21,10 +21,24 @@ ul.no_dots_vert_center {
 a {
   font-weight: 900;
   text-underline-position: under;
+
   &[href^="tel:"] {
     text-decoration: none;
   }
 }
+.main {
+  h3, .h3 {
+    margin-bottom: 1rem;
+  }
+
+
+  ul.no_dots_vert {
+    h3, .h3 {
+      margin-bottom: .10rem;
+    }
+  }
+}
+
 
 address {
   font-style: normal;
@@ -38,10 +52,15 @@ address {
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: auto 800px auto;
+    grid-template-columns: auto 320px auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-    ". header ."
+    ". header .";
+
+    @include breakpoint(large up) {
+      grid-template-columns: auto 800px auto;
+    }
+
   }
 }
 
@@ -67,9 +86,28 @@ address {
 .header_top__tagline {
   width: 100%;
   letter-spacing: .2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 80%;
   @supports (font-variant-caps: petite-caps) {
     font-variant-caps: petite-caps;
+  }
+
+  @include breakpoint(medium up) {
+    padding-bottom: 1.5rem;
+    font-size: 100%;
+  }
+}
+
+.header__logo_large {
+  display: none;
+    @include breakpoint(medium up) {
+      display: block;
+    }
+}
+
+.header__logo_mobile {
+  @include breakpoint(medium up) {
+    display: none;
   }
 }
 
@@ -86,12 +124,16 @@ address {
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns:  auto 800px auto;
+    grid-template-columns: auto 300px auto;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "nav nav nav"
     "title title title"
     ". main .";
+
+    @include breakpoint(medium up) {
+      grid-template-columns: auto 800px auto;
+    }
   }
 }
 
@@ -105,8 +147,6 @@ address {
     background-color: $primary-color;
   }
 
-
-
 }
 
 .page_title {
@@ -114,7 +154,6 @@ address {
   color: $secondary-color;
   text-align: center;
   line-height: 1.5;
-  
   h2, .h2 {
     line-height: 1.45;
     margin-top: -2rem;
@@ -124,8 +163,12 @@ address {
 
 
 .main {
-  padding: 2.5rem 0 0 0;
+  padding: 2rem 0 0 0;
   text-align: center;
+
+  @include breakpoint(medium up) {
+    padding: 2.5rem 0 0 0;
+  }
 
   img {
     padding:1rem 0;
@@ -135,8 +178,9 @@ address {
 
 .bottom__container {
   background-color: $success-color;
-  margin-top: -.8rem;
+  margin-top: -.5rem;
   padding: 2rem 0 1rem 0;
+
 }
 // Arists page
 .artist_individual {

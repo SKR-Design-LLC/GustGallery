@@ -15,12 +15,19 @@
 
     @supports (display: grid) {
       display: grid;
-      grid-template-columns:  auto 800px auto;
+      grid-template-columns: auto 300px auto;
       grid-template-rows: auto auto auto;
       grid-template-areas:
       ". intro ."
       "featured featured featured"
       ". images .";
+
+      @include breakpoint(medium up) {
+        grid-template-columns: auto 600px auto;
+      }
+      @include breakpoint(large up) {
+        grid-template-columns: auto 800px auto;
+      }
     }
 }
 
@@ -31,8 +38,13 @@
   color: $primary-color;
   font-weight: $global-weight-bold;
   line-height: 2;
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-size: 140%;
+
+  @include breakpoint(medium up) {
+    margin-top: 3rem;
+  }
+
 }
 
 .two-col {
@@ -42,12 +54,24 @@
   width: 100%;
   margin: 0 auto 3rem auto;
   padding: 0 20%;
+  @include breakpoint(small to medium) {
+    padding: 1rem 0;
+  }
 }
 
 .col-one, .col-two {
   display: inline-block;
-  width: 48%;
-  padding: 1rem 0;
+  width: 100%;
+
+  @include breakpoint(medium up) {
+    padding: 1rem 0;
+    width: 48%;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
   li {
     line-height: 2.4;
   }

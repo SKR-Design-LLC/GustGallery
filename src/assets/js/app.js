@@ -22,6 +22,15 @@ $(function(){
 	 $('.main_nav > li > a[href="'+pathname+'"]').addClass('active');
 });
 
+// Back to top-button
+$(function(){
+    $('.top-button').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+         return false;
+    });
+
+});
+
 // Adds current year to Copyright text in footer
 $(function(){
   var d = new Date();

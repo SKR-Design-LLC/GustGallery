@@ -3,11 +3,10 @@ title: Events
 description: Upcoming gallery events
 ---
 <div class="page_title">
-  <h2>Events</h2>
+  <h2>{{title}}</h2>
 </div>
 
-<div class="main" id="content">
+<div id="{{title}}" class="main">
     <h3>Closed for the Season.</h3>
-    <p>Upcoming Events follow us on</p>
-    <p>Facebook <a href="https://www.facebook.com/gustgallery/">Gust Gallery Fine Arts</a></p>
-    <p>Instagram <a href="https://www.instagram.com/gust_gallery/">gust_gallery</a></p>
+    <p>Upcoming Events follow us on<br>
+    {{> social_media}}</p>

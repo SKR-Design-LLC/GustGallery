@@ -3,12 +3,12 @@ title: Contact
 description: Contact information for the Gust Gallery
 ---
 <div class="page_title">
-  <h2>Contact</h2>
+  <h2>{{title}}</h2>
 </div>
 
-<div class="main" id="content">
+<div id="{{title}}" class="main">
     <!-- Opened May 19. Hours daily for May is 11-5. June first 2 weeks 10am to 5pm - then last 2 weeks 10am to 6pm. July-Aug 10am - 7pm. Sept back to 10am -5pm. -->
-    <h3>Closed for the Season.<br />
+    <h3>Closed for the Season.<br>
     Reopening May 2020.</h3>
 
     <ul class="no_dots_vert">
@@ -30,9 +30,10 @@ description: Contact information for the Gust Gallery
       </li>
     </ul>
 
-    <p>See our latest posts of artists works!</p>
-    <p>Facebook <a href="https://www.facebook.com/gustgallery/">Gust Gallery Fine Arts</a></p>
-    <p>Instagram <a href="https://www.instagram.com/gust_gallery/">gust_gallery</a></p>
+    <h3>See our latest posts of artists works!</h3>
+    <p>
+      {{> social_media}}
+    </p>
 
     <div class="images">
       <figure>

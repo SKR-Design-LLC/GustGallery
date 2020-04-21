@@ -1,6 +1,11 @@
 footer {
   background-color: $success-color;
   text-align: center;
+  padding-top: 1.5rem;
+
+  @include breakpoint(medium up) {
+    padding-top: 0;
+  }
 
   li {
     line-height: 1.3;
@@ -11,5 +16,14 @@ footer {
   }
   .li__top_space {
     padding-top: 1rem;
+  }
+  .footer__to_top {
+    padding-top: 2rem;
+
+    .footer__to_top_symbol {
+      font-size: 150%;
+      vertical-align: text-top;
+    }
+    
   }
 }
