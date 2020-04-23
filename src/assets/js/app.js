@@ -22,6 +22,26 @@ $(function(){
 	 $('.main_nav > li > a[href="'+pathname+'"]').addClass('active');
 });
 
+// nav bars
+$('.nav_bars').click(function() {
+  // $(this).toggleClass('change');
+  if ($('.main_nav').first().is(':hidden')) {
+    $('.main_nav').slideDown('slow');
+    $('.nav_bars').addClass('change');
+  } else {
+      $('.main_nav').hide();
+      $('.nav_bars').removeClass('change');
+  }
+
+  $('.main_nav').removeClass('change');
+
+});
+// when an item in the menu is clicked the menu will hide
+$('.main_nav').children().click(function() {
+  $('.main_nav').hide();
+  $('.nav_bars').removeClass('change');
+});
+
 // Back to top-button
 $(function(){
     $('.top-button').click(function(){

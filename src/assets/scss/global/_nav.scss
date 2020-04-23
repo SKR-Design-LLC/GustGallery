@@ -1,22 +1,95 @@
 // navigation
+
+// nav bars for mobile
+.nav_bars {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding-bottom: .25rem;
+
+  &:hover > .nav_bars__title {
+    color: $dark-gray;
+  }
+
+  &:hover > .bars > .bar1,
+  &:hover > .bars > .bar2,
+  &:hover > .bars > .bar3 {
+    background-color: $dark-gray;
+  }
+
+  @include breakpoint(large up) {
+    display: none;
+  }
+
+}
+
+.nav_bars__title {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: .15rem 0 0 .5rem;
+  font-size: 120%;
+  font-weight: $global-weight-bold;
+}
+
+.bars {
+  padding: .3rem 0 0 .5rem;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: $primary-color;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .bar2 {opacity: 0;}
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+
 nav {
-  ul {
+  ul.main_nav {
+
+    .hide {display: none;}
+
+    display: none;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: space-between;
+    border-top: 8px solid $dark-black;
+    border-bottom: 8px solid $dark-black;
+    margin-bottom: .8rem;
     //box-shadow: 1px 5px 6px #111;
 
-    @include breakpoint(medium up) {
+    @include breakpoint(large up) {
+      display: flex;
       flex-direction: row;
+      border:0;
+      margin-bottom: 0;
     }
   }
   li {
     font-size: 120%;
     text-align: center;
-    border: 1px solid $dark-black;
     background-color: $secondary-color;
     flex-grow: 1;
     font-weight: 900;
+
+    @include breakpoint(large up) {
+      border: 1px solid $dark-black;
+    }
 
     &.fill {
       flex-grow:3;
@@ -26,12 +99,15 @@ nav {
       line-height: 1;
       display: block;
       text-decoration: none;
-      //text-shadow: 1px 4px 4px $black;
-      border: 8px solid $secondary-color;
+      border: 12px solid $secondary-color;
+
+      @include breakpoint(large up) {
+        border: 8px solid $secondary-color;
+      }
+
       &:hover, &:focus, &:active, &.active {
         background-color: $primary-color;
         color: $dark-black;
-        text-shadow: none;
       }
     }
 
