@@ -70,7 +70,10 @@ address {
 }
 // header top - logo
 .header_top__tagline {grid-area: tagline;}
-.header_top__logo {grid-area: logo;}
+.header_top__logo {
+  grid-area: logo;
+  margin: 0 auto;
+}
 
 .header_top__container {
   background-color: $dark-black;
@@ -101,7 +104,7 @@ address {
 .header__logo_large {
   display: none;
     @include breakpoint(mid_medium up) {
-      display: block;
+      display: inline;
     }
 }
 
