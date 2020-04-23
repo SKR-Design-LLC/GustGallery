@@ -3,7 +3,7 @@ footer {
   text-align: center;
   padding-top: 1.5rem;
 
-  @include breakpoint(medium up) {
+  @include breakpoint(mid_medium up) {
     padding-top: 0;
   }
 
@@ -24,6 +24,6 @@ footer {
       font-size: 150%;
       vertical-align: text-top;
     }
-    
+
   }
 }

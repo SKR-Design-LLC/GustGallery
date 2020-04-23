@@ -52,12 +52,12 @@ address {
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: auto 320px auto;
+    grid-template-columns: auto 90% auto;
     grid-template-rows: auto auto;
     grid-template-areas:
     ". header .";
 
-    @include breakpoint(large up) {
+    @include breakpoint(mid_medium up) {
       grid-template-columns: auto 800px auto;
     }
 
@@ -92,7 +92,7 @@ address {
     font-variant-caps: petite-caps;
   }
 
-  @include breakpoint(large up) {
+  @include breakpoint(mid_medium up) {
     padding-bottom: 1.5rem;
     font-size: 100%;
   }
@@ -100,13 +100,13 @@ address {
 
 .header__logo_large {
   display: none;
-    @include breakpoint(large up) {
+    @include breakpoint(mid_medium up) {
       display: block;
     }
 }
 
 .header__logo_mobile {
-  @include breakpoint(large up) {
+  @include breakpoint(mid_medium up) {
     display: none;
   }
 }
@@ -123,14 +123,14 @@ address {
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: auto 300px auto;
+    grid-template-columns: auto 90% auto;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "nav nav nav"
     "title title title"
     ". main .";
 
-    @include breakpoint(large up) {
+    @include breakpoint(mid_medium up) {
       grid-template-columns: auto 800px auto;
     }
   }
@@ -165,7 +165,7 @@ address {
   padding: 2rem 0 0 0;
   text-align: center;
 
-  @include breakpoint(large up) {
+  @include breakpoint(mid_medium up) {
     padding: 2.5rem 0 0 0;
   }
 

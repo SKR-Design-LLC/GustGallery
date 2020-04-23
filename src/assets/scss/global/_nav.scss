@@ -20,7 +20,7 @@
     background-color: $dark-gray;
   }
 
-  @include breakpoint(large up) {
+  @include breakpoint(mid_medium up) {
     display: none;
   }
 
@@ -73,7 +73,7 @@ nav {
     margin-bottom: .8rem;
     //box-shadow: 1px 5px 6px #111;
 
-    @include breakpoint(large up) {
+    @include breakpoint(mid_medium up) {
       display: flex;
       flex-direction: row;
       border:0;
@@ -87,7 +87,7 @@ nav {
     flex-grow: 1;
     font-weight: 900;
 
-    @include breakpoint(large up) {
+    @include breakpoint(mid_medium up) {
       border: 1px solid $dark-black;
     }
 
@@ -101,7 +101,7 @@ nav {
       text-decoration: none;
       border: 12px solid $secondary-color;
 
-      @include breakpoint(large up) {
+      @include breakpoint(mid_medium up) {
         border: 8px solid $secondary-color;
       }
 
