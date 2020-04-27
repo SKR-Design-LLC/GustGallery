@@ -186,7 +186,17 @@ address {
 }
 // Arists page
 .artist_individual {
+  img {
+    width: 300px;
+    padding:0 0 3rem 0;
+
+    @include breakpoint(mid_medium up) {
+      width: 600px;
+    }
+  }
+
   figcaption {
     font-weight: $global-weight-bold;
   }
+
 }
