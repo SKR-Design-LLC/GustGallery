@@ -37,6 +37,19 @@ $('.nav_bars').click(function() {
 });
 
 
+$(function(){
+  var height = img.get.imageElement.naturalHeight;
+
+  getElementById('artists')
+
+  if (height > 600) {
+    img.addClass('artist_individual__vertical')
+  }
+  if (height > 900) {
+      img.addClass('artist_individual__vertical_extra_long')
+  }
+});
+
 // Back to top-button
 $(function(){
     $('.top-button').click(function(){

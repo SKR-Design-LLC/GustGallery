@@ -186,14 +186,30 @@ address {
 }
 // Arists page
 figure.artist_individual {
+
   img {
     width: 300px;
     padding:0 0 6rem 0;
 
+    &.artist_individual__vertical {
+      width: 275px;
+    }
+    &.artist_individual__vertical_extra_long {
+      width: 250px;
+    }
+
     @include breakpoint(mid_medium up) {
-      width: 600px;
+      width: inherit;
+
+      &.artist_individual__vertical {
+        width: 500px;
+      }
+      &.artist_individual__vertical_extra_long {
+        width: 450px;
+      }
     }
   }
+
 
   figcaption {
     font-weight: $global-weight-bold;
