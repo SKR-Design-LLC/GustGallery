@@ -185,10 +185,10 @@ address {
 
 }
 // Arists page
-.artist_individual {
+figure.artist_individual {
   img {
     width: 300px;
-    padding:0 0 3rem 0;
+    padding:0 0 6rem 0;
 
     @include breakpoint(mid_medium up) {
       width: 600px;
@@ -199,4 +199,16 @@ address {
     font-weight: $global-weight-bold;
   }
 
+  &.artist__two_images {
+    img {
+      padding:0 0 2rem 0;
+      vertical-align: text-top;
+    }
+    padding:0 0 6rem 0;
+  }
+
+}
+
+div.artist_individual > h3 {
+  padding-bottom: 5rem;
 }
