@@ -13,7 +13,6 @@ require('foundation-sites');
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-
 $(document).foundation();
 
 // Assigns "active" class to navbar item based on current page URL with jQuery
@@ -36,17 +35,20 @@ $('.nav_bars').click(function() {
 
 });
 
-
-$(function(){
-  var height = img.get.imageElement.naturalHeight;
-
-  getElementById('artists')
-
-  if (height > 600) {
-    img.addClass('artist_individual__vertical')
-  }
-  if (height > 900) {
-      img.addClass('artist_individual__vertical_extra_long')
+//Within div id="artists" - looks for images' naturalHeight
+//and adds one of two classes based on height
+$(function() {
+  var images = $('#artists').find('img');
+  // you could also change heigth to naturalHeight
+  for( var i=0; i<images.length;i++){
+    if (images[i].naturalHeight > 900) {
+      $(images[i]).addClass('artist_individual__vertical_extra_long');
+    }
+    else{
+      if(images[i].naturalHeight > 600) {
+        $(images[i]).addClass('artist_individual__vertical');
+      }
+    }
   }
 });
 

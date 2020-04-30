@@ -7,6 +7,10 @@ footer {
     padding-top: 0;
   }
 
+  ul {
+    padding-top: 1.5rem;
+  }
+
   li {
     line-height: 1.3;
   }
@@ -19,10 +23,11 @@ footer {
   }
   .footer__to_top {
     padding-top: 2rem;
+    vertical-align: top;
 
     .footer__to_top_symbol {
       font-size: 150%;
-      vertical-align: text-top;
+      vertical-align: top;
     }
 
   }
