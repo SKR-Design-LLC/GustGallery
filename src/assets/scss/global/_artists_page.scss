@@ -1,0 +1,64 @@
+// Arists page
+.artists_sub_nav > li > a {
+  padding-right: 1rem;
+  text-align: center;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.artist_subtitle {
+  font-size: 130%;
+  font-weight: $global-weight-bold;
+  background-color: $primary-color;
+  color: $success-color;
+  line-height: 1.3;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+figure.artist_individual {
+
+  img {
+    width: 300px;
+    padding:0 0 6rem 0;
+
+    &.artist_individual__vertical {
+      width: 275px;
+    }
+    &.artist_individual__vertical_extra_long {
+      width: 250px;
+    }
+
+    @include breakpoint(mid_medium up) {
+      width: inherit;
+
+      &.artist_individual__vertical {
+        width: 500px;
+      }
+      &.artist_individual__vertical_extra_long {
+        width: 450px;
+      }
+    }
+  }
+
+
+  figcaption {
+    font-weight: $global-weight-bold;
+    font-size: 110%;
+  }
+
+  &.artist__two_images {
+    img {
+      padding:0 0 2rem 0;
+      vertical-align: text-top;
+    }
+    padding:0 0 6rem 0;
+  }
+
+}
+
+div.artist_individual > h3 {
+  padding-bottom: 5rem;
+}
