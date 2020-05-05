@@ -18,55 +18,86 @@
   margin-bottom: 2rem;
 }
 
-figure.artist_individual {
-
-  img {
-    width: 300px;
-    padding:0 0 6rem 0;
-
-    &.artist_individual__vertical {
-      width: 275px;
-    }
-    &.artist_individual__vertical_extra_long {
-      width: 250px;
-    }
-
-    @include breakpoint(mid_medium up) {
-      width: inherit;
-
-      &.artist_individual__vertical {
-        width: 500px;
-      }
-      &.artist_individual__vertical_extra_long {
-        width: 450px;
-      }
-    }
-  }
-
-
-  figcaption {
-    font-weight: $global-weight-bold;
-    font-size: 110%;
-  }
-
-  &.artist__two_images {
+.artist_section {
+  figure {
     img {
-      padding:0 0 2rem 0;
-      vertical-align: text-top;
+      width: 300px;
+      padding:0 0 6rem 0;
+
+      &.vertical {
+        width: 275px;
+      }
+      &.vertical_extra_long {
+        width: 250px;
+      }
+
+      @include breakpoint(mid_medium up) {
+        width: inherit;
+
+        &.vertical {
+          width: 500px;
+        }
+        &.vertical_extra_long {
+          width: 450px;
+        }
+      }
     }
-    padding:0 0 6rem 0;
+
+
+    figcaption {
+      font-weight: $global-weight-bold;
+      font-size: 110%;
+      padding-bottom: .5rem;
+    }
+
+    &.two_images {
+      img {
+        padding:0 0 2rem 0;
+        vertical-align: text-top;
+      }
+      padding:0 0 6rem 0;
+    }
+
+    div > h3 {
+      padding-bottom: 5rem;
+    }
   }
-
-}
-
-div.artist_individual > h3 {
-  padding-bottom: 5rem;
 }
 
 // artist_pages
-.artist_bio {
+.artist_pages {
 
-  &__title {
+  .artist_bio__container {
+    grid-area: bioContainer; width: 100%;
+    text-align: center;
+    background-color: $primary-color;
+    color: $success-color;
+    padding: 2rem;
+  }
+  .artist_bio {
+    margin: 0 auto;
+    width: 70%;
 
+    &__title {
+      font-weight: $global-weight-bold;
+      padding-bottom: 1rem;
+    }
+  }
+
+  margin: 0 auto;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: auto 90% auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav nav nav"
+    "title title title"
+    ". main ."
+    "bioContainer bioContainer bioContainer";
+
+    @include breakpoint(mid_medium up) {
+      grid-template-columns: auto 800px auto;
+    }
   }
 }
