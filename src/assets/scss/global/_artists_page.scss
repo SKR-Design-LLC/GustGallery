@@ -19,10 +19,11 @@
 }
 
 .artist_section {
-  figure {
-    img {
-      width: 300px;
-      padding:0 0 6rem 0;
+  font-weight: $global-weight-bold;
+
+  img {
+    padding:0 0 6rem 0;
+    width: 300px;
 
       &.vertical {
         width: 275px;
@@ -45,12 +46,10 @@
 
 
     figcaption {
-      font-weight: $global-weight-bold;
-      font-size: 110%;
       padding-bottom: .5rem;
     }
 
-    &.two_images {
+    .two_images {
       img {
         padding:0 0 2rem 0;
         vertical-align: text-top;
@@ -61,30 +60,17 @@
     div > h3 {
       padding-bottom: 5rem;
     }
-  }
+
+    p, h3, h4, .h3, .h4 {
+      margin-bottom: 0;
+    }
+
 }
 
 // artist_pages
 .artist_pages {
-
-  .artist_bio__container {
-    grid-area: bioContainer; width: 100%;
-    text-align: center;
-    background-color: $primary-color;
-    color: $success-color;
-    padding: 2rem;
-  }
-  .artist_bio {
-    margin: 0 auto;
-    width: 70%;
-
-    &__title {
-      font-weight: $global-weight-bold;
-      padding-bottom: 1rem;
-    }
-  }
-
   margin: 0 auto;
+  text-align: center;
 
   @supports (display: grid) {
     display: grid;
@@ -94,10 +80,39 @@
     "nav nav nav"
     "title title title"
     ". main ."
-    "bioContainer bioContainer bioContainer";
+    "bioContainer bioContainer bioContainer"
+    ". artistContact .";
 
     @include breakpoint(mid_medium up) {
       grid-template-columns: auto 800px auto;
     }
   }
+
+  .artist_bio__container {
+    grid-area: bioContainer; width: 100%;
+    background-color: $primary-color;
+    color: $success-color;
+    padding: 2rem 0;
+    @include breakpoint(mid_medium up) {
+      padding: 2rem;
+    }
+  }
+  .artist_bio {
+    margin: 0 auto;
+    width: 85%;
+    @include breakpoint(mid_medium up) {
+      width: 70%;
+    }
+
+    &__title {
+      font-weight: $global-weight-bold;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .artist_pages__contact {
+    padding-top: 3rem;
+    grid-area: artistContact;
+  }
+
 }

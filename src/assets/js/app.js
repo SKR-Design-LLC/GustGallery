@@ -38,15 +38,15 @@ $('.nav_bars').click(function() {
 //Within div id="artists" - looks for images' naturalHeight
 //and adds one of two classes based on height
 $(function() {
-  var images = $('#artists').find('img');
+  var images = $('.artist_section').find('img');
   // you could also change heigth to naturalHeight
   for( var i=0; i<images.length;i++){
     if (images[i].naturalHeight > 900) {
-      $(images[i]).addClass('artist_individual__vertical_extra_long');
+      $(images[i]).addClass('vertical_extra_long');
     }
     else{
       if(images[i].naturalHeight > 600) {
-        $(images[i]).addClass('artist_individual__vertical');
+        $(images[i]).addClass('vertical');
       }
     }
   }
