@@ -50,6 +50,11 @@ address {
   background-color: $dark-black;
   margin: 0 auto;
 
+  width: 90%;
+  @include breakpoint(mid_medium up) {
+    width: 800px;
+  }
+
   @supports (display: grid) {
     display: grid;
     grid-template-columns: auto 90% auto;
@@ -118,11 +123,17 @@ address {
 // global grid
 .main_wrapper {
 
-  .main {grid-area: main; background-color: $success-color;}
+  .main {grid-area: main;}
   nav {grid-area:nav;}
   .page_title {grid-area: title;}
 
   margin: 0 auto;
+  background-color: $success-color;
+  padding: 0;
+
+  nav {
+    background-color: $secondary-color;
+  }
 
   @supports (display: grid) {
     display: grid;
@@ -139,17 +150,6 @@ address {
   }
 }
 
-// main section
-
-.main_wrapper {
-  background-color: $success-color;
-  padding: 0;
-
-  nav {
-    background-color: $secondary-color;
-  }
-
-}
 
 .page_title {
   background-color: $primary-color;
@@ -165,11 +165,19 @@ address {
 
 
 .main {
+  background-color: $success-color;
   padding: 2rem 0 0 0;
   text-align: center;
 
+  width: 90%;
+  margin: 0 auto;
   @include breakpoint(mid_medium up) {
     padding: 2.5rem 0 0 0;
+    width: 800px;
+  }
+
+  @supports (display: grid) {
+    width: inherit;
   }
 
   img {
@@ -180,7 +188,11 @@ address {
 
 .bottom__container {
   background-color: $success-color;
-  margin-top: -.5rem;
-  padding: 2rem 0 1rem 0;
+  margin-top: -2rem;
+  padding: 3rem 0 1rem 0;
 
+}
+
+figure {
+  display: block;
 }

@@ -22,7 +22,7 @@
   font-weight: $global-weight-bold;
 
   img {
-    padding:0 0 6rem 0;
+    padding:0 0 4rem 0;
     width: 300px;
 
       &.vertical {
@@ -33,6 +33,7 @@
       }
 
       @include breakpoint(mid_medium up) {
+        padding:0 0 6rem 0;
         width: inherit;
 
         &.vertical {
