@@ -1,7 +1,6 @@
 footer {
   background-color: $success-color;
   text-align: center;
-  padding-top: 1.5rem;
 
   @include breakpoint(mid_medium up) {
     padding-top: 0;

@@ -1,10 +1,14 @@
 // homepage
-.home__intro {grid-area: intro;}
-.home__featured {grid-area: featured;}
-.home__images {
-  grid-area: images;
+#home_wrapper {
+  margin-bottom: 0rem;
+}
+
+.home__intro {grid-area: home_intro; padding-top: 1rem;}
+.home__featured {grid-area: home_featured;}
+.home__images {grid-area: home_images;
+  padding-top: 2rem;
     img {
-      padding:1rem 0;
+      padding: 1rem 0;
     }
 }
 
@@ -18,17 +22,32 @@
       grid-template-columns: auto 90% auto;
       grid-template-rows: auto auto auto;
       grid-template-areas:
-      ". intro ."
-      "featured featured featured"
-      ". images .";
+      ". home_intro ."
+      "home_featured home_featured home_featured"
+      ". home_images .";
 
-      @include breakpoint(medium) {
+      @include breakpoint(medium up) {
         grid-template-columns: auto 600px auto;
       }
       @include breakpoint(mid_medium up) {
         grid-template-columns: auto 800px auto;
       }
     }
+}
+
+.home__intro, .home__images {
+  margin: 0 auto;
+  @supports (display: grid) {
+    width: inherit;
+  }
+
+  width: 90%;
+  @include breakpoint(medium up) {
+    width: 600px;
+  }
+  @include breakpoint(mid_medium up) {
+    width: 800px;
+  }
 }
 
 .home__featured_title {
@@ -52,8 +71,11 @@
   font-weight: 700;
   color: $success-color;
   width: 100%;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto;
   padding: 1rem 0;
+  @include breakpoint(medium) {
+    padding: 0 3%;
+  }
   @include breakpoint(mid_medium up) {
     padding: 0 15%;
   }
@@ -62,8 +84,7 @@
 .col-one, .col-two {
   display: inline-block;
   width: 100%;
-
-  @include breakpoint(mid_medium up) {
+  @include breakpoint(medium up) {
     padding: 1rem 0;
     width: 49%;
   }

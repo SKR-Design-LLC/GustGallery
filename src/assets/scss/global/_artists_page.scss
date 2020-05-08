@@ -1,10 +1,18 @@
 // Arists page
-.artists_sub_nav > li > a {
-  padding-right: 1rem;
+.artists_sub_nav {
+  display: inline-block;
   text-align: center;
 
-  &:last-child {
-    padding-right: 0;
+  > li {
+    display: inherit;
+
+    > a {
+      padding: 0 .7rem;
+      white-space: nowrap;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
   }
 }
 
@@ -93,14 +101,14 @@
     grid-area: bioContainer; width: 100%;
     background-color: $primary-color;
     color: $success-color;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
     @include breakpoint(mid_medium up) {
-      padding: 2rem;
+      padding: 2rem 0;
     }
   }
   .artist_bio {
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     @include breakpoint(mid_medium up) {
       width: 70%;
     }
@@ -112,8 +120,12 @@
   }
 
   .artist_pages__contact {
-    padding-top: 3rem;
+    padding-top: 2rem;
     grid-area: artistContact;
+
+    @include breakpoint(mid_medium up) {
+      padding-top: 3rem;
+    }
   }
 
 }
