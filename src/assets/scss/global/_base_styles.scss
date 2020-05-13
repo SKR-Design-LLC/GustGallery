@@ -23,7 +23,10 @@ a {
   text-underline-position: under;
 
   &[href^="tel:"] {
-    text-decoration: none;
+    text-decoration: underline;
+    @include breakpoint(mid_medium up) {
+      text-decoration: none;
+    }
   }
 }
 
@@ -46,77 +49,6 @@ address {
   font-style: normal;
 }
 
-// header
-.header_container {
-  header {grid-area: header;}
-  background-color: $dark-black;
-  margin: 0 auto;
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: auto 90% auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    ". header .";
-
-    @include breakpoint(mid_medium up) {
-      grid-template-columns: auto 800px auto;
-    }
-
-  }
-}
-
-
-.header_container {
-  background-color: $dark-black;
-}
-// header top - logo
-.header_top__tagline {grid-area: tagline;}
-.header_top__logo {
-  grid-area: logo;
-  margin: 0 auto;
-}
-
-.header_top__container {
-  background-color: $dark-black;
-  text-align: center;
-  padding-top: .5rem;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-  "tagline"
-  "logo";
-}
-.header_top__tagline {
-  width: 100%;
-  letter-spacing: .2rem;
-  padding-bottom: 1rem;
-  font-size: 80%;
-  @supports (font-variant-caps: petite-caps) {
-    font-variant-caps: petite-caps;
-  }
-
-  @include breakpoint(mid_medium up) {
-    padding-bottom: 1.5rem;
-    font-size: 100%;
-  }
-}
-
-.header__logo_large {
-  display: none;
-    @include breakpoint(mid_medium up) {
-      display: inline;
-    }
-}
-
-.header__logo_mobile {
-  @include breakpoint(mid_medium up) {
-    display: none;
-  }
-}
-
-
 // global grid
 .main_wrapper {
 
@@ -135,7 +67,7 @@ address {
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: auto 90% auto;
+    grid-template-columns: auto 85% auto;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "nav nav nav"
@@ -168,8 +100,8 @@ address {
   text-align: center;
 
   margin: 0 auto;
-  width: 90%;
-  
+  width: 85%;
+
   @include breakpoint(mid_medium up) {
     padding: 2.5rem 0 0 0;
     width: 800px;

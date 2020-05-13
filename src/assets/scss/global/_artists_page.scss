@@ -40,7 +40,7 @@
         width: 250px;
       }
 
-      @include breakpoint(mid_medium up) {
+      @include breakpoint(medium up) {
         padding:0 0 6rem 0;
         width: inherit;
 
@@ -121,6 +121,7 @@
 
   .artist_pages__contact {
     padding-top: 2rem;
+    margin-bottom: -3rem;
     grid-area: artistContact;
 
     @include breakpoint(mid_medium up) {

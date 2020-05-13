@@ -70,14 +70,16 @@ nav {
     align-content: space-between;
     //border-top: 8px solid $dark-black;
     //border-bottom: 8px solid $dark-black;
-    margin-bottom: .8rem;
     //box-shadow: 1px 5px 6px #111;
+    //margin-bottom: .8rem;
+    margin-bottom: 0;
+    padding-bottom: .5rem;
 
     @include breakpoint(mid_medium up) {
       display: flex;
       flex-direction: row;
       border:0;
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
   li {

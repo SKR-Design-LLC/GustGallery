@@ -54,7 +54,7 @@ $(function() {
 
 // Back to top-button
 $(function(){
-    $('.top-button').click(function(){
+    $('.footer__to_top__link').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
          return false;
     });

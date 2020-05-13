@@ -1,6 +1,8 @@
 footer {
   background-color: $success-color;
   text-align: center;
+  margin: 0 auto;
+  width: 90%;
 
   @include breakpoint(mid_medium up) {
     padding-top: 0;
@@ -22,11 +24,14 @@ footer {
   }
   .footer__to_top {
     padding-top: 2rem;
-    vertical-align: top;
 
-    .footer__to_top_symbol {
+    &__link {
+      border-bottom: 2px solid $primary-color;
+      text-decoration: none;
+    }
+    &__symbol {
       font-size: 150%;
-      vertical-align: top;
+      vertical-align: text-top;
     }
 
   }
