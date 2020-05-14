@@ -60,6 +60,8 @@
 
 
 nav {
+  text-align: center;
+
   ul.main_nav {
 
     .hide {display: none;}
@@ -68,38 +70,57 @@ nav {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: space-between;
-    //border-top: 8px solid $dark-black;
-    //border-bottom: 8px solid $dark-black;
-    //box-shadow: 1px 5px 6px #111;
-    //margin-bottom: .8rem;
     margin-bottom: 0;
     padding-bottom: .5rem;
 
     @include breakpoint(mid_medium up) {
-      display: flex;
+      display: inline;
+      @supports (display:flex) {
+        display: flex;
+      }
       flex-direction: row;
       border:0;
       padding-bottom: 0;
     }
   }
   li {
+    display: inline-block;
+    @supports (display:flex) {
+      width: inherit;
+    }
+
     font-size: 120%;
-    text-align: center;
     background-color: $secondary-color;
     flex-grow: 1;
     font-weight: 900;
 
     @include breakpoint(mid_medium up) {
-      border: 1px solid $dark-black;
+      border-right: 1px solid $dark-black;
+
+      @supports (display:flex) {
+        border: 1px solid $dark-black;
+      }
     }
 
     &.fill {
-      flex-grow:3;
+      border-right: 1px solid $dark-black;
+      @supports (display:flex) {
+        flex-grow:3;
+      }
+    }
+
+    &.main_nav__home {
+      border-left: 1px solid $dark-black;
     }
 
     a {
-      line-height: 1;
-      display: block;
+      line-height: 1.3;
+      padding: 0 .4rem;
+      display: inline-block;
+      @supports (display:flex) {
+        line-height: 1;
+        display: block;
+      }
       text-decoration: none;
       border: 12px solid $secondary-color;
 
@@ -113,5 +134,8 @@ nav {
       }
     }
 
+
+
   }
+
 }
