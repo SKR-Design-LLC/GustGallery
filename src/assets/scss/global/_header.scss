@@ -6,7 +6,7 @@
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: auto 90% auto;
+    grid-template-columns: auto 95% auto;
     grid-template-rows: auto auto;
     grid-template-areas:
     ". header .";
@@ -63,11 +63,13 @@
 .header__logo_large {
   display: none;
     @include breakpoint(mid_medium up) {
+      min-height: 6.083rem;
       display: inline;
     }
 }
 
 .header__logo_mobile {
+  min-height: 10.042rem;
   @include breakpoint(mid_medium up) {
     display: none;
   }
