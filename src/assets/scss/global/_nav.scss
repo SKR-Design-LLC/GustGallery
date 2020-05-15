@@ -86,7 +86,7 @@ nav {
   li {
     display: inline-block;
     @supports (display:flex) {
-      display: block;
+      display: inherit;
       width: inherit;
     }
 
@@ -99,6 +99,7 @@ nav {
       border-right: 1px solid $dark-black;
 
       @supports (display:flex) {
+        display: inline-block;
         border: 1px solid $dark-black;
       }
     }
