@@ -137,6 +137,7 @@ nav {
       &:hover, &:focus, &:active, &.active {
         background-color: $primary-color;
         color: $dark-black;
+        border-bottom: 0;
       }
     }
 

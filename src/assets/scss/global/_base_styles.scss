@@ -28,6 +28,11 @@ a {
       text-decoration: none;
     }
   }
+
+  &:hover {
+    background-color: $primary-color;
+    border-bottom: 1px solid $primary-color;
+  }
 }
 
 
@@ -132,4 +137,8 @@ figure {
 
 #Sitemap > ul {
   line-height: 2.6;
+  li.sitemap__titles {
+    font-weight: $global-weight-bold;
+    font-size: 120%;
+  }
 }

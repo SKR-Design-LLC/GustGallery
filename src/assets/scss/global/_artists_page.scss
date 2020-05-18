@@ -7,11 +7,16 @@
     display: inherit;
 
     > a {
-      padding: 0 .7rem;
+      margin: 0 .7rem;
       white-space: nowrap;
-      &:first-child {
-        padding-left: 0;
+      &:hover {
+        border-bottom: 1.1px solid $primary-color;
+        text-decoration: none;
       }
+      &:first-child {
+        margin-left: 0;
+      }
+
     }
   }
 }
@@ -30,7 +35,7 @@
   font-weight: $global-weight-bold;
 
   img {
-    padding:0 0 4rem 0;
+    padding: .5rem 0 4rem 0;
     width: 300px;
 
       &.vertical {
@@ -42,7 +47,7 @@
 
 
       @include breakpoint(medium up) {
-        padding:0 0 6rem 0;
+        padding:.5rem 0 6rem 0;
         width: inherit;
 
         &.vertical {
@@ -52,15 +57,6 @@
           width: 450px;
         }
       }
-    }
-
-
-    figcaption {
-      padding-bottom: .5rem;
-    }
-
-    a:hover > ::before {
-      content: "View more works by ";
     }
 
     .two_images {
@@ -80,6 +76,23 @@
     }
 
 }
+
+
+.artist_section {
+    a:hover {
+      text-decoration: none;
+      > figcaption {
+        background-color: $primary-color;
+        display: inherit;
+      }
+      &> ::before {
+        content: "View more works by ";
+        background-color: $primary-color;
+        border-bottom: 1px solid $primary-color;
+      }
+    }
+  }
+
 
 // artist_pages
 .artist_pages {
