@@ -64,7 +64,6 @@ address {
   nav {
     background-color: $secondary-color;
   }
-
   @supports (display: grid) {
     display: grid;
     grid-template-columns: auto 85% auto;
@@ -129,4 +128,8 @@ address {
 
 figure {
   display: block;
+}
+
+#Sitemap > ul {
+  line-height: 2.6;
 }
