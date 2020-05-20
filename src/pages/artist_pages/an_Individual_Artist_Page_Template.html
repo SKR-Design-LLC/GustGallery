@@ -1,21 +1,24 @@
 ---
 layout: artist_pages
-title: Artist Template (Update to Artist Name)
+title: Artist Template Update to Artist Name
 description: Artist Template (Update to Artist Name) artist works at Gust Gallery
 ---
 
 <div class="page_title">
-  <h2>{{title}}</h2>
+  <h2 class="editable" id="{{title}}_title">Update to Artist Name</h2>
 </div>
 <div id="{{title}}" class="main artist_section editable">
-
+  <figure>
+    <figcaption>&quot;Title&quot;<br />9x12&quot; media</figcaption>
+    <img src="{{root}}/assets/img/Bill_Duma_Road_Into_Waterton_9x12_2020.jpeg" class="lazy" data-src="lazy_load_image_placeholder.gif" alt="Artist name - title - measurements media">
+  </figure>
 
 </div>
 
 <div class="artist_bio__container">
-  <div class="artist_bio">
+  <div class="artist_bio editable" id="{{title}}_bio">
     <div class="artist_bio__title">Artist Biography</div>
-
+      <p>Information goes here.</p>
 
   </div>
 </div>

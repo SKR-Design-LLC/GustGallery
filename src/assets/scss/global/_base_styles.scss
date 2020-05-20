@@ -37,7 +37,7 @@ a {
 
 
 .main {
-  h3, .h3 {
+  h3, .h3, h2, .h2 {
     margin-bottom: 1rem;
   }
 
@@ -141,4 +141,15 @@ figure {
     font-weight: $global-weight-bold;
     font-size: 120%;
   }
+}
+
+//CMS editor style
+html [data-cms-editable]:hover {
+  outline-color: #32CD32;
+  outline-color: rgba(50, 205, 50, 0.6);
+}
+
+html [data-cms-editable].cms-focus {
+  outline-color: #00FF00;
+  outline-color: rgba(0, 255, 0, 0.85);
 }
