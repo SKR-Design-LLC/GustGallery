@@ -96,4 +96,12 @@
   li {
     line-height: 2.4;
   }
+
+  a {
+    color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: #FFFFFF;
+    }
+  }
 }
