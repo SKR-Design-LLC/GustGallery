@@ -108,14 +108,6 @@ nav {
       border-right: 1px solid $dark-black;
       @supports (display:flex) {
         flex-grow:3;
-        border-right: 0;
-      }
-    }
-
-    &.main_nav__home {
-      border-left: 1px solid $dark-black;
-      @supports (display:flex) {
-        border-left:0;
       }
     }
 
@@ -133,12 +125,18 @@ nav {
 
       @include breakpoint(mid_medium up) {
         border: 8px solid $secondary-color;
+        &.main_nav__home {
+          border-left: 1px solid $dark-black;
+        }
       }
 
       &:hover, &:focus, &:active, &.active {
         background-color: $primary-color;
         color: $dark-black;
         border-bottom: 0;
+        @include breakpoint(mid_medium down) {
+
+        }
       }
     }
 
