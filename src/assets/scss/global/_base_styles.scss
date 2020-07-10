@@ -82,6 +82,7 @@ address {
       grid-template-columns: auto 800px auto;
     }
   }
+
 }
 
 
@@ -117,6 +118,20 @@ address {
 
   img {
     padding:1rem 0;
+  }
+
+  figure.figcap_bottom {
+    padding-top: 1rem;
+    img {
+      padding: 0;
+    }
+
+    figcaption {
+      padding-bottom: 2rem;
+      font-style: italic;
+      font-size: 80%;
+    }
+
   }
 
 }
