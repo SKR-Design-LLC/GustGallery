@@ -1,13 +1,5 @@
 // accessibility
-.screen_reader_accessible {
-  display: none;
-  width:0;
-  height: 0;
-  color: $black;
-  background: $white;
-}
-
-#skiptocontent a {
+#skiptocontent > a {
   position:absolute;
   left:-10000px;
   top:auto;
@@ -28,4 +20,12 @@
   &:hover, &:active {
     color: #D6D6D6;
   }
+}
+
+.screen_reader_accessible {
+  display: none;
+  width:0;
+  height: 0;
+  color: $black;
+  background: $white;
 }

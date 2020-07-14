@@ -17,6 +17,10 @@
     margin: 0 auto;
     background-color: $success-color;
 
+    h2 {
+      padding-top: 1rem;
+    }
+
     @supports (display: grid) {
       display: grid;
       grid-template-columns: auto 85% auto;
