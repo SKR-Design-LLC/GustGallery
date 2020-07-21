@@ -16,7 +16,7 @@ require('foundation-sites');
 $(document).foundation();
 
 // Assigns "active" class to navbar item based on current page URL with jQuery
-$(function(){
+$(function() {
   var pathname = window.location.pathname;
 	 $('.main_nav > li > a[href="'+pathname+'"]').addClass('active');
 });
