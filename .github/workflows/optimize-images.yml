@@ -1,5 +1,5 @@
 name: Optimize images
-on: push_request
+on: push
 jobs:
   build:
     name: calibreapp/image-actions
