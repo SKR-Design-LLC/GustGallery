@@ -130,6 +130,10 @@
     @include breakpoint(mid_medium up) {
       padding: 2rem 0;
     }
+
+    h3 {
+      padding: 2rem 0 1rem 0;
+    }
   }
   .artist_bio {
     margin: 0 auto;
