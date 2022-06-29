@@ -41,11 +41,11 @@ $(function() {
   var images = $('.artist_section').find('img');
   // you could also change heigth to naturalHeight
   for( var i=0; i<images.length;i++){
-    if (images[i].naturalHeight > 900) {
+    if (images[i].naturalHeight > 1000) {
       $(images[i]).addClass('vertical_extra_long');
     }
     else{
-      if(images[i].naturalHeight > 600) {
+      if(images[i].naturalHeight > 900) {
         $(images[i]).addClass('vertical');
       }
     }
